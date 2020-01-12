@@ -5,7 +5,7 @@ window.onload = function () {
     box.style.border = '10px solid black';
 
     box.onclick = function(){
-    console.log('click');
+    // console.log('click');
     }
   
 }
