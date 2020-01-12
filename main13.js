@@ -10,9 +10,22 @@ window.onload = function () {
         this.style.backgroundColor = 'yellow';
         this.style.borderColor = 'green';
     }
-    document.addEventListener('click', function(){
-        box.style.left = event.clientX + 'px';
-        box.style.top = event.clientY + 'px';
-        });
+    document.onclick = function(event) {
+        let start = Date.now();
+        let duration = 2000;
+    
+        let timer = setInterval(function() {
+          let timePassed = Date.now() - start;
+           box.style.left = (event.clientX * (timePassed / duration))  + 'px';
+           box.style.top =  (event.clientY  * (timePassed / duration))  + 'px';
+        
+        //    console.log(timePassed);
+        //    console.log(timePassed / duration);
+    
+    
+          if (timePassed > duration) clearInterval(timer);
+    
+        }, 20);
+    }
 }
 console.log('after onload');
