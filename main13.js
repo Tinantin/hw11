@@ -6,6 +6,8 @@ window.onload = function () {
     box.style.border = '10px solid black';
 
     box.onclick = function(){
+        this.style.backgroundColor = 'yellow';
+        this.style.borderColor = 'green';
     }
     
 }
