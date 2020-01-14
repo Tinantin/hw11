@@ -11,6 +11,10 @@ function SuperArray(n, m, value){
   
     this.list = arr;
   }
+
+  SuperArray.prototype.render 
+
+
   var valueArr = new SuperArray(10, 20, { min: 10, max: 55 });
 
   console.log(valueArr);  
