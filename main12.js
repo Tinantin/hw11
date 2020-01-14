@@ -12,7 +12,23 @@ function SuperArray(n, m, value){
     this.list = arr;
   }
 
-  SuperArray.prototype.render 
+  SuperArray.prototype.render = function(separator){
+    if(!separator) separator = '-';
+
+    separator = separator || '-';
+
+    for(var i = 0; i < this.list.length; i++){
+        for(var j = 0; j < this.list[i].length; j++){
+            document.write(this.list[i][j] + ' ');
+        }
+        document.write('<br />');
+    }
+
+    for(var k = 0; k <= 20; k++){
+        document.write(separator);
+    }
+    document.write('<br />');
+}
 
 
   var valueArr = new SuperArray(10, 20, { min: 10, max: 55 });
