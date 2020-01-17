@@ -51,6 +51,12 @@ window.onload = function () {
       list.appendChild(itemList);
     }
   menu.appendChild(list);
+  //////////////////////////////////////////////////////////////////////
+var menuElem = menu.querySelector('.rowDown');
+
+menuElem.onclick = function() {
+     menu.classList.toggle('open');
+};
 }
    console.log('after onload');
 

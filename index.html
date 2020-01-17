@@ -20,12 +20,24 @@
         width: 100px;
         text-align: center;
       }
+      .menu .rowDown::before {
+      content: '▶ ';
+      font-size: 80%;
+      color: green;
+    }
+    .menu.open .rowDown::before {
+      content: '▼ ';
+    }
+
+    .menu.open ul {
+      display: block;
+    }
     </style>
 </head>
 <body>
     <div class="menu">
-        <span class="rightDown"></span>
+        <span class="rowDown">RowDown</span>
     </div>
- <script src="main.js" defer></script>
+ <script src="main15.js" defer></script>
 </body>
 </html>
