@@ -4,40 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-      .menu {
-        /* border: 5px solid green; */
-        /* display: inline; */
-        
-        
-      }
-      .row-menu{
-        display: flex;
-        /* flex-direction: column; */
-    }
-      .item {
-        display: block;
-        margin-right: 20px;
-        width: 100px;
-        text-align: center;
-      }
-      .menu .rowDown::before {
-      content: '▶ ';
-      font-size: 80%;
-      color: green;
-    }
-    .menu.open .rowDown::before {
-      content: '▼ ';
-    }
-
-    .menu.open ul {
-      display: block;
-    }
+      
     </style>
 </head>
 <body>
-    <div class="menu">
-        <span class="rowDown">RowDown</span>
-    </div>
- <script src="main15.js" defer></script>
+  <div id = "box" class = "menu">
+    <input type = "text" name = "firstName" class = "firstName" >
+    <input type = "text" name = "lastName" class = "lastName">
+    <input type = "text" name = "age" class = "age">
+  </div>
+ <script src="main17.js" defer></script>
 </body>
 </html>
