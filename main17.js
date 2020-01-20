@@ -5,25 +5,32 @@ window.onload = function () {
   getItemValue ();
 
 function setItemValue (){
-////////////////// положить значения в localStorage
-var obj = {}; 
+////////////////// положить значения в localStorage (пользователь зашел 1й раз)
+  var obj = {}; 
 
   for (var i = 0; i < fields.length; i++){
     var name = fields[i].name;
     var value = fields[i].value;
     obj[name] = value;
   }
-console.log(obj);
- 
   localStorage.setItem('form', JSON.stringify(obj));
 }
+
 button.onclick = setItemValue;
 
 function getItemValue (){
-  ////////////////// получить значения с localStorage
-    var obj = localStorage.getItem('form');
-    console.log(obj);
-}
+  ////////////////// получить значения с localStorage (пользователь зашел повторно)
+    var obj = JSON.parse(localStorage.getItem('form'));  /// получ знвчения по ключу getItem (parse преобраз в объект строку)
+    if (obj) {
+      for (var i = 0; i < fields.length; i++){
+        var name = fields[i].name;
+        var value = obj[name];
+        fields[i].value = value;
+      }
+    }
+    
+  }
+  
+
 }
     console.log('after onload');
-
