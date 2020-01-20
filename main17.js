@@ -1,23 +1,21 @@
 window.onload = function () {
-// var arr = [
-//     {name: 'fieldName', value: 'Aaaa' }
+
+  var fields = this.document.querySelectorAll('.firstName, .lastName, .age')
+  
+  function setItem (){
+  ////////////////// положить значения в localStorage
+    for (var i = 0; i < fields.length; i++){
+      var obj = {}; 
+  
+      var name = fields[i].name;
+      var value = fields[i].value;
+      obj[name] = value;
+    }
     
-//     {name: 'secondName', value: 'Bbbn'}
-//   ]
-
-var fields = this.document.querySelectorAll('.firstName, .lastName, .age')
-
-function setItem (){
-
-  console.log(fields);
-  for (var i = 0; i < fields.length; i++){
-    var name = fields[i].name;
-    var value = localStorage[name];
+    var json = JSON.stringify(obj);
+    localStorage.setItem('form', json);
   }
-}
-setItem();
-}
-    console.log('after onload');
-
-
+  setItem();
+  }
+      console.log('after onload');
 
