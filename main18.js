@@ -5,6 +5,9 @@ window.onload = function () {
   var store = {
     setInStore: function(key, value){
      localStorage.setItem(key, value);
+    },
+    getFromStore: function(key){
+
     }
   }
  
