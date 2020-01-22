@@ -1,38 +1,26 @@
 window.onload = function () {
 
-  var obj = [
-    { 
-      title: 'Title1',
-      size: 100, 
-      img: 'url' , 
-      cost: 300
-    }, 
-    {
-       title: 'Title2', 
-       size: 200, 
-       img: 'url',
-       cost: 300 
-      }, 
-      { 
-        title: 'Title2', 
-        size: 150, 
-        img: 'url', 
-        cost: 300 
-      }]
+  let data = [
+    { title: 'Title1', size: 100, img: 'url', cost: 300}, 
+    { title: 'Title2', size: 200, img: 'url',cost: 300}, 
+    { title: 'Title2', size: 150, img: 'url', cost: 300}]
 
+  const block = document.querySelector('.block')
 
       function ViewController (){
 
       }
       ViewController.prototype.render = mass => {
-        console.log('hjdcjhcd');
+        mass.forEach(element => {
+          console.log(element);
+        });
       }
 
       let viev = new ViewController();
 
       console.log(viev);
 
-
+      viev.render(data);
 
 
       // var card = document.querySelector('.block');
