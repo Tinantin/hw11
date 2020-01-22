@@ -13,16 +13,28 @@ window.onload = function () {
     }
   }
  
+  function getParent(elem, selector){
+    return elem.closest(selector);
+  }
+ 
   store.getFromStore('counter');
-  button.nextElementSibling.innerHTML = store.value;
+  var block = getParent(button, '.block').querySelector('counter').innerHTML = store.value;
+ //  button.nextElementSibling.innerHTML = store.value;
  
   button.onclick = function (){
-    var value = ++this.nextElementSibling.innerText;
-    store. setInStore('counter', value);
+    var block = getParent(button, '.block');
+    var counter = 0;
+ 
+    if(block){
+      counter = ++block.querySelector('.counter').innerHTML;
+      block.querySelector('.counter').innerHTML = counter;
+    }
+    store.setInStore('counter', counter);
   }
  
  }
      console.log('after onload');
+ 
  
  
  
