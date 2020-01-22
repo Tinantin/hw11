@@ -11,14 +11,18 @@ window.onload = function () {
 
       }
       ViewController.prototype.render = mass => {
-        mass.forEach(element => {
-          console.log(element);
-        });
+        let items = mass.map(item => '<span' + ' class="block"' + '>' + 
+        item.title + '<br>' +
+        item.size + '<br>' +
+        item.img + '<br>' +
+        item.cost + '<br>' +
+          '</span>');
+        block.innerHTML  = items.join(' ')
       }
 
       let viev = new ViewController();
 
-      console.log(viev);
+      // console.log(viev);
 
       viev.render(data);
 
