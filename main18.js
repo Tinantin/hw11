@@ -24,38 +24,39 @@ window.onload = function () {
       var block = getParent(button[i], '.block');
       var counter = 0;
 
+      block.style = 'background-color: ' + 
+    '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
+
+
       if (block) {
           counter = ++block.querySelector('.counter').innerHTML;
-      }
-
+      } 
       store.setInStore('counter' + i, counter);
+    }
   }
+
+  function clearAll (){
+    var divs = document.querySelector('.box');
+    let spans = document.querySelectorAll('.counter');
+      for (let span of spans)
+         span.innerHTML = 0;
+ 
+   }
+
+
+  var buttonClear = document.querySelector('.clear');
+  buttonClear.addEventListener('click', clearAll);
+
+  var buttonCounter = document.querySelector('.mainCount');
+  buttonCounter.addEventListener('click', function(e){
+  var block_id = prompt('write id');
+  var counter = prompt('write number');
+  document.getElementById(block_id).querySelector('.counter').innerHTML = counter;
+ })
 }
-
- function clearAll (){
-  var divs = document.querySelector('.box');
-  let spans = document.querySelectorAll('.counter');
-  for (let span of spans)
-  span.innerHTML = 0;
- 
- }
- var buttonClear = document.querySelector('.clear');
- buttonClear.addEventListener('click', clearAll);
-
-
-var buttonCounter = document.querySelector('.mainCount');
-buttonCounter.addEventListener('click', function(e){
-var block_id = prompt('write id');
-var counter = prompt('write number');
-document.getElementById(block_id).querySelector('.counter').innerHTML = counter;
-})
-
-}
-        console.log('after onload');
+console.log('after onload');
 
 
 
 
- 
- 
  
