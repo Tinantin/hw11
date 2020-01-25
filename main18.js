@@ -9,8 +9,11 @@ window.onload = function () {
       },
     getFromStore: function(key) {
       this.value = localStorage.getItem(key) || 0;
+        return this.value;
       }
   }
+
+  store.setInStore('default-color', 'background-color: rgb(251, 211, 2);');
 
   function getParent(elem, selector) {
     return elem.closest(selector);
@@ -23,14 +26,24 @@ window.onload = function () {
     button[i].onclick = function() {
       var block = getParent(button[i], '.block');
       var counter = 0;
-
-      block.style = 'background-color: ' + 
-    '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
-
-
+      
+      var color = 'background-color: ' + 
+      '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
+      
+      store.setInStore('background-color' + i, color);
+      
       if (block) {
           counter = ++block.querySelector('.counter').innerHTML;
       } 
+    
+      console.log(counter);
+      if(counter >= 50){
+        block.style = store.getFromStore('default-color');
+      } else {
+
+        block.style = store.getFromStore('background-color' + i);
+      }
+
       store.setInStore('counter' + i, counter);
     }
   }
@@ -58,5 +71,3 @@ console.log('after onload');
 
 
 
-
- 
