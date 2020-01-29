@@ -14,14 +14,7 @@ app.get('/', function (req, res) { // req - обьект запроса, res -- 
   res.send('ghh');
 });
 app.get('/users', function (req, res) { // req - обьект запроса, res -- обьект ответа
-    
-// let users = [
-//   {name: 'Valentina'},
-//   {name: 'Valentina'},
-//   {name: 'Valentina'},
-//   {name: 'Valentina'},
- 
-// ];
+
 const users = getDataFromDataBasse();
   res.send(users);
 });
@@ -29,18 +22,18 @@ const users = getDataFromDataBasse();
 function getDataFromDataBasse() {
     
   return users = [
-    {name: 'Valentina'},
-    {name: 'Valentina'},
-    {name: 'Valentina'},
-    {name: 'Valentina'},
+    {name: 'Koala'},
+    {name: 'Doge'},
+    {name: 'Snail'},
+    {name: 'Koteika'},
    
   ];
 }
 
 app.get('/user', function (req, res) { // req - обьект запроса, res -- обьект ответа
-  
   const users = getDataFromDataBasse();
-  res.send(users);
+  const lastUser = [users.pop()];
+  res.send(lastUser);
 });
 
 
@@ -48,14 +41,4 @@ app.listen(3000, function () { // говорим на каком порту за
   console.log('Example app listening on port http://localhost:3000/users');
 });
 
-app.listen(3000, function () { // говорим на каком порту запускать нашу  NODE_JS  программу.
-  console.log('Example app listening on port http://localhost:3000/user');
-});
 
-
-
-
-
-
-
-   

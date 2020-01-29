@@ -34,7 +34,6 @@ this.document.querySelector('#btn').onclick = function() {
   console.log(xhttp.readyState, 'xhttp.readyState');
   if (xhttp.readyState == 4) {
       let newData = xhttp.responseText;
-      // console.log(data);
       let parsedNewData = JSON.parse(newData);
       console.log(parsedNewData) 
       render(parsedNewData);
