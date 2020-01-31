@@ -13,4 +13,13 @@
       xhttp.open("POST", "http://localhost:3000/users", true);
       xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       xhttp.send(body);
+
+      xhttp.onreadystatechange = function() {
+
+        if (xhttp.readyState == 4) {
+        let responseText = xhttp.responseText;
+        console.log(responseText);    // <= goods
+          }
+        
+        }
   }
