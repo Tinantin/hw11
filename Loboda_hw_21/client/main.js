@@ -1,11 +1,16 @@
 
   this.document.querySelector('#btn').onclick = function(event) {
     event.preventDefault();
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
    
-    var data = {
+    let data = {
       login: document.querySelector('.login').value,
       password: document.querySelector('.password').value
     };
-    console.log(data);
+    // console.log(data);
+    let body = 'login=' + data.login + '&password=' + data.password;
+
+      xhttp.open("POST", "http://localhost:3000/users", true);
+      xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhttp.send(body);
   }
