@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
- 
+  newItems: [],
     items: [
       { text: 'bla' },
       { text: 'bla bla' },
@@ -10,8 +10,7 @@ var app = new Vue({
   },
   methods:{
     transfer(){
-        this.items.pop();
-        
-      }
+      this.newItems.push(this.items.pop());
+    }
   },
 })

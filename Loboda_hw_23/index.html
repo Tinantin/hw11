@@ -15,7 +15,12 @@
             <li v-for="item in items">
               {{ item.text }}
             </li>
-          </ol>
+        </ol>
+        <ul> 
+          <li v-for="item in newItems">
+          {{ item.text }}
+        </li>
+        </ul>
           <button v-on:click="transfer">Change Item</button>  
       </div>
  <script src="main.js" defer></script>
