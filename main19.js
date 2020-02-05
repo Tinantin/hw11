@@ -4,8 +4,8 @@ let data = [
   { title: 'Title2', size: 150, img: 'url', cost: 300}]
 
 const block = document.querySelector('.block');
-var titleInput = document.getElementById('title');
-
+const titleInput = document.getElementById('title');
+const prices = document.getElementById('price');
 
     function ViewController (){
 
@@ -28,6 +28,11 @@ var titleInput = document.getElementById('title');
     titleInput.oninput = function() {
       let items = data.filter(item => 
         item.title.includes(titleInput.value)); 
-      console.log(items);
       viev.render(items);
+    };
+    priceInput.oninput = function() {
+      let prices = data.filter(item => 
+        item.cost >= parseInt(priceInput.value));
+      console.log(prices);
+      viev.render(prices);
     };
