@@ -30,9 +30,16 @@ const prices = document.getElementById('price');
         item.title.includes(titleInput.value)); 
       viev.render(items);
     };
+    
     priceInput.oninput = function() {
       let prices = data.filter(item => 
         item.cost >= parseInt(priceInput.value));
-      console.log(prices);
+      // console.log(prices);
       viev.render(prices);
+    };
+
+    document.getElementById("reset").onclick = function(e) {
+      document.getElementById("title").value = "";
+      document.getElementById("price").value = "";
+      viev.render(data);
     };
