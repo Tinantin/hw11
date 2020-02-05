@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-          .block {
-            height: 200px;
-            width: 200px;
-        }
+    span {
+        display: flex;
+        flex-direction: column;
+    }
+    .block {
+        border: 5px solid rgb(72, 34, 178);
+        height: 100px;
+        width: 200px;
+        margin-top: 10px;
+    }
     </style>
 </head>
 <body>
-    <div id = "box" class="block"></div>
-
-    <script src="main.js" defer></script>
+    <input type="text" id="title" >
+    
+    <div class="block">
+    </div>
+ <script src="main.js" defer></script>
 </body>
 </html>
