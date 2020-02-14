@@ -17,13 +17,13 @@ Vue.component('diagram', {
   data() {
       return {
           divs: [
-              {name: 'Column 1'},
-              {name: 'Column 2'},
-              {name: 'Column 3'},
-              {name: 'Column 4'},
-              {name: 'Column 5'},
-              {name: 'Column 6'},
-              {name: 'Column 7'}
+              {name: 'Column 1', className: 'block'},
+              {name: 'Column 2', className: 'block'},
+              {name: 'Column 3', className: 'block'},
+              {name: 'Column 4', className: 'block'},
+              {name: 'Column 5', className: 'block'},
+              {name: 'Column 6', className: 'block'},
+              {name: 'Column 7', className: 'block'}
           ]
       }
   },
