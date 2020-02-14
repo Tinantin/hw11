@@ -4,6 +4,11 @@ Vue.component('app-div', {
       obj: Object,
       // className: String
   },
+  data() {
+    return {
+      sizeRender: 'inputs'
+    }
+  },
   computed:{
     activeColor: function(){
         return {
@@ -12,27 +17,33 @@ Vue.component('app-div', {
       },
       sizeStyle: function(){
           return {
-              height: this.obj.height + 'px'
+              height: this.sizeRender + 'px'
           }
     }
   },
+  created: function (){
+      this.sizeRender = this.obj.height  
+    },
   
   template: `
   
-      <div :class="[obj.className]" :style = "[activeColor, sizeStyle]">
+  <div :class="[obj.className]" >
     
-        {{obj.name}}
-          
-      </div>
-      
-  `
+
+    <div class="wrapper" :style = "[activeColor, sizeStyle]">
+    {{obj.name}}
+     </div>
+     <input type="range" min="0" :max="obj.height" step="1" v-model="sizeRender"> 
+  </div>
+  
+`
 })
 
 Vue.component('diagram', {
   data() {
       return {
           divs: [
-            {name: 'Column 1', className: 'block', activeColor: 'red', height: 220},
+            {name: 'Column 1', className: 'block', activeColor: 'red', height: 220, },
             {name: 'Column 2', className: 'block', activeColor: 'blue', height: 200},
             {name: 'Column 3', className: 'block', activeColor: 'green', height: 100},
             {name: 'Column 4', className: 'block', activeColor: 'gray', height: 170},
