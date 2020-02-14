@@ -24,14 +24,22 @@ Vue.component('app-div', {
   created: function (){
       this.sizeRender = this.obj.height  
     },
+      mounted() {
+    if (localStorage.sizeRender) {
+      this.sizeRender = localStorage.sizeRender;
+    }
+  },
+  watch: {
+    name(newSizeRender) {
+      localStorage.sizeRender = newSizeRender;
+    }
+  },
   
   template: `
   
   <div :class="[obj.className]" >
-    
-
     <div class="wrapper" :style = "[activeColor, sizeStyle]">
-    {{obj.name}}
+          {{obj.name}}
      </div>
      <input type="range" min="0" :max="obj.height" step="1" v-model="sizeRender"> 
   </div>
