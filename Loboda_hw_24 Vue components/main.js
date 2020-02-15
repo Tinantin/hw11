@@ -24,16 +24,16 @@ Vue.component('app-div', {
   created: function (){
       this.sizeRender = this.obj.height  
     },
-      mounted() {
-    if (localStorage.sizeRender) {
-      this.sizeRender = localStorage.sizeRender;
-    }
-  },
-  watch: {
-    name(newSizeRender) {
-      localStorage.sizeRender = newSizeRender;
-    }
-  },
+    mounted() {
+      if (localStorage.obj) {
+        this.obj = localStorage.obj;
+      }
+    },
+    watch: {
+      name(newObj) {
+        localStorage.obj = newObj;
+      }
+    },
   
   template: `
   
