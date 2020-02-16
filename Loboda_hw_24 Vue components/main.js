@@ -6,7 +6,8 @@ Vue.component('app-div', {
   },
   data() {
     return {
-      sizeRender: 'inputs'
+      sizeRender: 'inputs',
+      dataObj: obj
     }
   },
   computed:{
@@ -25,19 +26,19 @@ Vue.component('app-div', {
       this.sizeRender = this.obj.height  
     },
     mounted() {
-      if (localStorage.obj) {
-        this.obj = localStorage.obj;
+      if (this.dataObj == this.obj) {
+        this.dataObj = localStorage.dataObj;
       }
     },
     watch: {
-      name(newObj) {
-        localStorage.obj = newObj;
+      dataObj(newObj) {
+        localStorage.dataObj = newObj;
       }
     },
   
   template: `
   
-  <div :class="[obj.className]" >
+  <div :class="[obj.className]" v-model="dataObj">
     <div class="wrapper" :style = "[activeColor, sizeStyle]">
           {{obj.name}}
      </div>
