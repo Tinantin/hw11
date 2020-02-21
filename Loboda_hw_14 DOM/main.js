@@ -15,7 +15,20 @@ window.onload = function () {
       box.style.border = '10px solid black';
     }
   }
-}
 
- 
+  windowField.onclick = function (event) {
+    let windowFieldCoords = this.getBoundingClientRect(); // координаты относительно окна браузера
+
+    let boxCoords = {
+      top: event.clientY - windowFieldCoords.top - windowField.clientTop -
+        box.clientHeight / 2,
+      left: event.clientX - windowFieldCoords.left - windowField.clientLeft -
+        box.clientWidth / 2
+    };
+
+    box.style.left = boxCoords.left + 'px';
+    box.style.top = boxCoords.top + 'px';
+
+  }
+}
 console.log('after onload');
