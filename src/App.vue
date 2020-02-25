@@ -2,18 +2,10 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-   <button
-      type="button"
-      class="btn"
-      @click="showModal"
-    >
-      Open Modal!
-    </button>
 
-    <ModalWindow
-      v-show="isModalVisible"
-      @close="closeModal"
-    >
+
+    <ModalWindow>
+   
     </ModalWindow>
   </div>
 
@@ -30,23 +22,7 @@ export default {
   components: {
     HelloWorld,
     ModalWindow
-  },
-  props: {
-    visible: Object
-  },
-    data () {
-      return {
-        isModalVisible: false,
-      };
-    },
-    methods: {
-      showModal() {
-        this.isModalVisible = true;
-      },
-      closeModal() {
-        this.isModalVisible = false;
-      }
-    },
+  }
 }
 </script>
 

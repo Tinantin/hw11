@@ -11,7 +11,7 @@
           id="modalTitle"
         >
           <slot name="header">
-            This is the default tile!
+            This is Text!
 
             <button
               type="button"
@@ -28,21 +28,12 @@
           id="modalDescription"
         >
           <slot name="body">
-            I'm the default body!
+            This is Text!
           </slot>
         </section>
         <footer class="modal-footer">
           <slot name="footer">
-            I'm the default footer!
-
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
+           This is Text!
           </slot>
         </footer>
       </div>
