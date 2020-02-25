@@ -10,9 +10,6 @@
           class="modal-header"
           id="modalTitle"
         >
-          <slot name="header">
-            This is Text!
-
             <button
               type="button"
               class="btn-close"
@@ -21,19 +18,18 @@
             >
               x
             </button>
-          </slot>
         </header>
         <section
           class="modal-body"
           id="modalDescription"
         >
           <slot name="body">
-            This is Text!
+
           </slot>
         </section>
         <footer class="modal-footer">
           <slot name="footer">
-           This is Text!
+
           </slot>
         </footer>
       </div>
@@ -68,35 +64,30 @@
   .modal {
     width: 400px;
     height: 500px;
+    text-align: center;
     background: #FFFFFF;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
+    text-align: right;
   }
 
-  .modal-header,
+  .modal-body ,
   .modal-footer {
     padding: 15px;
     display: flex;
+    padding: 20px 10px;
+    border-top: 1px solid #eeeeee;
+    justify-content: center;
   }
 
   .modal-header {
     border-bottom: 1px solid #eeeeee;
     color: #4AAE9B;
-    justify-content: space-between;
-  }
-
-  .modal-footer {
-    border-top: 1px solid #eeeeee;
-    justify-content: flex-end;
-  }
-
-  .modal-body {
-    position: relative;
-    padding: 20px 10px;
-  }
-
+    display: inline-block;
+    }
+    
   .btn-close {
     border: none;
     font-size: 20px;

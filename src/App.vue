@@ -11,9 +11,17 @@
     </button>
 
     <ModalWindow
-      v-show="isModalVisible"
+      v-bind="visible"
+      v-show="modalVisible"
       @close="closeModal"
     >
+    <template v-slot:body>
+          This is Text!
+    </template>
+
+    <template v-slot:footer>
+          This is Text!
+    </template>  
     </ModalWindow>
   </div>
 
@@ -31,20 +39,20 @@ export default {
     HelloWorld,
     ModalWindow
   },
-  props: {
-
-  },
+  props: [
+    'visible'
+    ],
     data () {
       return {
-        isModalVisible: false,
+        modalVisible: false,
       };
     },
     methods: {
       showModal() {
-        this.isModalVisible = true;
+        this.modalVisible = true;
       },
       closeModal() {
-        this.isModalVisible = false;
+        this.modalVisible = false;
       }
     },
 }
@@ -57,6 +65,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60
+}
+.btn {
+  padding: 15px;
+  font-size: 20px;
+  font-style: italic;
+  color: #41b883;
 }
 </style>
