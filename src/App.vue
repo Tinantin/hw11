@@ -11,8 +11,8 @@
     </button>
 
     <ModalWindow
-    v-bind="visible"
-    v-show="modalVisible"
+      v-bind="visible"
+      v-show="modalVisible"
       @close="closeModal"
     >
     <template v-slot:body>
@@ -47,8 +47,6 @@ export default {
         modalVisible: false,
       };
     },
-    
-  
     methods: {
       showModal() {
         this.modalVisible = true;
