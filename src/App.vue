@@ -39,9 +39,9 @@ export default {
     HelloWorld,
     ModalWindow
   },
-  props: [
-    'visible'
-    ],
+  props: {
+			visible: Boolean
+		},
     data () {
       return {
         modalVisible: false,
@@ -72,5 +72,7 @@ export default {
   font-size: 20px;
   font-style: italic;
   color: #41b883;
+  border-radius: 7px;
+  border-color: #41b883;
 }
 </style>

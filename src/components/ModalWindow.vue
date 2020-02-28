@@ -21,8 +21,7 @@
         </header>
         <section
           class="modal-body"
-          id="modalDescription"
-        >
+          id="modalDescription">
           <slot name="body">
 
           </slot>
