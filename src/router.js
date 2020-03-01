@@ -1,12 +1,12 @@
 // routes.js
 
-import Login from './components/Login.vue';
+import Register from './components/Register.vue';
 import Main from './components/Main.vue';
 
 
 
 const routes = [
-    { path: '/', component: Login },
+    { path: '/', component: Register },
     { path: '/main', component: Main },
     
 ];
