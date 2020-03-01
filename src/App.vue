@@ -11,9 +11,7 @@
     </button>
 
     <ModalWindow
-      v-bind="visible"
-      v-show="modalVisible"
-      @close="closeModal"
+    v-bind:visible="modalVisible"
     >
     <template v-slot:body>
           This is Text!
@@ -38,10 +36,7 @@ export default {
   components: {
     HelloWorld,
     ModalWindow
-  },
-  props: {
-			visible: Boolean
-    },  
+  },  
     data () {
       return {
         modalVisible: false,
