@@ -1,0 +1,86 @@
+[
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Omen",
+    "color": "Black",
+    "brand": "HP",
+    "price": "30$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Gaming Gun",
+    "color": "Metal",
+    "brand": "Asus",
+    "price": "25$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук IdeaPad Onyx",
+    "color": "Black",
+    "brand": "Lenovo",
+    "price": "20$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук IdeaPad",
+    "color": "Chocolate",
+    "brand": "Lenovo",
+    "price": "25$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук HP Pavilion Notebook",
+    "color": "Black",
+    "brand": "HP",
+    "price": "30$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Legion",
+    "color": "Black",
+    "brand": "Lenovo",
+    "price": "25$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Predator Helios Shale",
+    "color": "Metal",
+    "brand": "Acer",
+    "price": "35$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук ASUS ROG Strix",
+    "color": "Black",
+    "brand": "Asus",
+    "price": "35$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Dell Inspiron",
+    "color": "Black",
+    "brand": "Dell",
+    "price": "40$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук Dell XPS",
+    "color": "Silver",
+    "brand": "Dell",
+    "price": "40$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук MacBook Pro 15\" Space",
+    "color": "Gray",
+    "brand": "Apple",
+    "price": "55$"
+  },
+  {
+    "image": "https://placeimg.com/300/200/tech",
+    "title": "Ноутбук MacBook Air 13\"",
+    "color": "Metal",
+    "brand": "Apple",
+    "price": "50$"
+  }
+]
