@@ -8,14 +8,25 @@
         aria-describedby="modalDescription"
       >
         <header class="modal-header" id="modalTitle">
-          <button type="button" class="btn-close" @click="close" aria-label="Close modal">x</button>
+          <button type="button" class="btn-close" 
+          @click="close" aria-label="Close modal">x</button>
         </header>
         <section class="modal-body" id="modalDescription">
-          <slot name="body"></slot>
+          <slot name="body">
+             Login
+          </slot>
         </section>
         <footer class="modal-footer">
-          <slot name="footer"></slot>
+          <slot name="footer">
+              Password
+          </slot>
         </footer>
+        <router-link to='/' class="line_btn">
+        <button class="button"
+        @click="$router.push('/')" >
+         Sign In
+        </button>
+        </router-link>
       </div>
     </div>
   </transition>
@@ -28,12 +39,12 @@ export default {
   props: {
     visible: {
       type: Boolean,
-      default: false
+      // default: false
       }
   },
   data() {
     return {
-      modalVisible: false
+      modalVisible: true
     };
   },
   watch: {

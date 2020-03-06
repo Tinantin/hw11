@@ -3,7 +3,7 @@
     <span class="hi">Hello</span>
     <div class="window">
       <button class="button">Sign In</button>
-      <button class="button">Registration</button>
+     
     </div>
   </div>
 </template>
@@ -11,6 +11,7 @@
 <script>
 export default {
   name: "Main"
+  
 };
 </script>
 

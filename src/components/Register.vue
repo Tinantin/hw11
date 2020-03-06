@@ -12,7 +12,14 @@
       </div>
       <div class="btn">
         <button class="button">Sign In</button>
-        <button class="button">Registration</button>
+        <!-- <button class="button">Registration</button> -->
+        <router-link to='/modal' class="line_btn">
+        <button class="button"
+        @click="$router.push('modal')" >
+        Registration
+        </button>
+        </router-link>
+
       </div>
     </div>
   </div>
@@ -24,9 +31,18 @@ export default {
   data() {
     return {
       login: null,
-      password: null
+      password: null,
+      modalVisible: false,
     };
-  }
+  },
+    methods: {
+      showModal() {
+        this.modalVisible = true;
+      },
+      closeModal() {
+        this.modalVisible = false;
+      }
+    },
 };
 </script>
 
@@ -43,11 +59,9 @@ export default {
   color: #41b883;
   margin: 20px;
 }
-/* .btn {
-  width: 100%;
-  vertical-align: middle;
-  display: flex;
-} */
+.line_btn {
+  text-decoration: none;
+}
 .button {
   font-size: 15px;
   font-weight: 600;

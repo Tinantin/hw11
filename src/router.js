@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 
 import Register from './components/Register.vue';
 import Main from './components/Main.vue';
+import Modal from './components/Modal.vue';
 
 Vue.use(VueRouter)
 
@@ -13,7 +14,16 @@ const routes = [
         name: ' ',
         component: Register 
     },
-    { path: '/main', component: Main },
+    { 
+        path: '/main', 
+        name: 'Main',
+        component: Main 
+    },
+    { 
+        path: '/modal', 
+        name: 'Modal',
+        component: Modal 
+    },
     
 ];
 
