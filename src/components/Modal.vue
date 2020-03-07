@@ -14,6 +14,7 @@
         <section class="modal-body" id="modalDescription">
           <slot name="body">
              Login
+             
           </slot>
         </section>
         <footer class="modal-footer">
