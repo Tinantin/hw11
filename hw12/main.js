@@ -1,8 +1,8 @@
-function SuperArray(n, m, value){
-    var arr = new Array(n);
+function SuperArray(a, z, value){
+    var arr = new Array(a);
 
     for(var i = 0; i < arr.length; i++){
-        arr[i]= new Array(m);
+        arr[i]= new Array(z);
         for(var j = 0; j < arr[i].length; j++){
             arr[i][j] = Math.floor(Math.random()*(value.max - value.min) 
             + value.min);
