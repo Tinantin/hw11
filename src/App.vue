@@ -1,55 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-   <button
-      type="button"
-      class="btn"
-      @click="showModal"
-    >
-      Open Modal!
-    </button>
-
-    <ModalWindow
-    v-bind:visible="modalVisible"
-    >
-    <template v-slot:body>
-          This is Text!
-    </template>
-
-    <template v-slot:footer>
-          This is Text!
-    </template>  
-    </ModalWindow>
+  <ButtonWindow />
   </div>
 
- 
- 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import ModalWindow from './components/ModalWindow.vue'
+import ButtonWindow from './components/ButtonWindow.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    ModalWindow
-  },  
-    data () {
-      return {
-        modalVisible: false,
-      };
-    },
-    methods: {
-      showModal() {
-        this.modalVisible = true;
-      },
-      closeModal() {
-        this.modalVisible = false;
-      }
-    },
+    ButtonWindow
+  }
 }
 </script>
 
