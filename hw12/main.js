@@ -14,9 +14,9 @@ function SuperArray(a, z, value){
   var valueArr = new SuperArray(10, 20, { min: 10, max: 55 });
 
   SuperArray.prototype.render = function(separator){
-    if(!separator) separator = '/';
+    if(!separator) separator = '---';
 
-    separator = separator || '/';
+    separator = separator || '---';
 
     for(var i = 0; i < this.list.length; i++){
         for(var j = 0; j < this.list[i].length; j++){
