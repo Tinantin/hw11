@@ -1,38 +1,53 @@
 <template>
   <div class="box">
-    <div  class="box" v-for="string in card_names" v-bind:key="string.id">
-	{{string}}
+    <!-- <div class="card" v-for="string in card_names" v-bind:key="string.id">
+		{{string}}
+		</div> -->
+    <div class="button" v-for="item in buttons" v-bind:key="item.id">
+      <div>{{getName}}</div>
+	<button @click="onClick(item)">{{item}}</button>
     </div>
-	<div class="card" v-for="item in button_names" v-bind:key="item.id">
-      <button @click="onClick(item)">{{item}}</button>
-    </div>
+    
   </div>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from "vuex";
+
 export default {
   name: "ButtonWindow",
   data() {
     return {
-      button_names: ["Сat", "Dog", "Alpaca" ],
-      card_names: ["Костя", "Костя", "Костя"]
+      buttons: ["Коля", "Ирина", "Станислав"],
+    //   card_names: ["Костя", "Костя", "Костя"]
     };
+  },
+  computed: {
+    ...mapGetters(["getName"])
+  },
+  methods: {
+    ...mapMutations(["setName"]),
+
+    onClick(item) {
+      this.setName(item);
+    }
   }
 };
 </script>
 
 <style>
 .box {
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-  color: brown;
-  border: 2px solid red;
-  width: 400px;
-  height: 250px;
+  color: red;
 }
-.card {
-  
+.button {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  background-color: black;
+}
+button {
+  background-color: black;
+  color: red;
   border: 2px solid red;
 }
 </style>
